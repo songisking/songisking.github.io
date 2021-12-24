@@ -277,22 +277,34 @@
 <p>数据是机器学习的原料，在把数据投入机器学习模型前，我们需要对数据进行加工。就像榨果汁，得先把水果削皮切小块了才可以投入榨汁机中，否则倒出来的连猫咪也喝不下去（不信试试┓( ´∀` )┏）。同样的，正确预处理数据对模型输出结果有非常非常非常（重要的事情说三遍）大的影响。可以说，数据预处理是机器学习落地最麻烦但最具有挑战的环节。</p>
 <h3 id="一、数据可能存在问题"><a href="#一、数据可能存在问题" class="headerlink" title="一、数据可能存在问题"></a>一、数据可能存在问题</h3><p>在实际业务处理中，数据通常是脏数据。所谓的脏，指数据可能存在以下几种问题（主要问题）:</p>
 <ol>
-<li>数据缺失 （Incomplete） 是属性值为空的情况。如 Occupancy = “ ”</li>
+<li><p>数据缺失 （Incomplete） 是属性值为空的情况。如 Occupancy = “ ”</p>
+</li>
+<li><p>数据噪声 （Noisy）是数据值不合常理的情况。如 Salary = “-100”</p>
+</li>
+<li><p>数据不一致 （Inconsistent）是数据前后存在矛盾的情况。如 Age = “42” vs. Birthday = “01/09/1985”</p>
+</li>
+<li><p>数据冗余 （Redundant）是数据量或者属性数目超出数据分析需要的情况。</p>
+</li>
+<li><p>数据集不均衡 （Imbalance）是各个类别的数据量相差悬殊的情况。</p>
+</li>
+<li><p>离群点/异常值 （Outliers）是远离数据集中其余部分的数据。</p>
+</li>
+<li><p>数据重复（Duplicate）是在数据集中出现多次的数据。</p>
+</li>
 </ol>
-<p>\2. 数据噪声 （Noisy）是数据值不合常理的情况。如 Salary = “-100”</p>
-<p>\3. 数据不一致 （Inconsistent）是数据前后存在矛盾的情况。如 Age = “42” vs. Birthday = “01/09/1985”</p>
-<p>\4. 数据冗余 （Redundant）是数据量或者属性数目超出数据分析需要的情况。</p>
-<p>\5. 数据集不均衡 （Imbalance）是各个类别的数据量相差悬殊的情况。</p>
-<p>\6. 离群点/异常值 （Outliers）是远离数据集中其余部分的数据。</p>
-<p>\7. 数据重复（Duplicate）是在数据集中出现多次的数据。</p>
 <h3 id="二、数据预处理步骤"><a href="#二、数据预处理步骤" class="headerlink" title="二、数据预处理步骤"></a>二、数据预处理步骤</h3><p>数据进行预处理主要有以下步骤，第一部分提及的各种脏数据的处理就在这些步骤中完成：</p>
 <ol>
-<li>数据清洗 Data Cleansing</li>
+<li><p>数据清洗 Data Cleansing</p>
+</li>
+<li><p>数据转换 Data Transformation</p>
+</li>
+<li><p>数据描述 Data Description</p>
+</li>
+<li><p>特征选择 Feature Selection 或特征组合 Feature Combination</p>
+</li>
+<li><p>特征抽取 Feature Extraction</p>
+</li>
 </ol>
-<p>\2. 数据转换 Data Transformation</p>
-<p>\3. 数据描述 Data Description</p>
-<p>\4. 特征选择 Feature Selection 或特征组合 Feature Combination</p>
-<p>\5. 特征抽取 Feature Extraction</p>
 <hr>
 <p><strong>在数据清洗阶段，我们处理第一部分提及的缺失数据、离群点和重复数据。</strong></p>
 <p>缺失数据有以下几类：</p>
@@ -319,13 +331,21 @@
 <li>连续型 Continuous</li>
 </ol>
 <p>Real values: Temperature, Height, Weight …</p>
-<p>\2. 离散型 Discrete</p>
+<ol start="2">
+<li>离散型 Discrete</li>
+</ol>
 <p>Integer values: Number of people …</p>
-<p>\3. 定序型 Ordinal</p>
+<ol start="3">
+<li>定序型 Ordinal</li>
+</ol>
 <p>Rankings: {Average, Good, Best}, {Low, Medium, High} …</p>
-<p>\4. 定类型 Nominal</p>
+<ol start="4">
+<li>定类型 Nominal</li>
+</ol>
 <p>Symbols: {Teacher, Worker, Salesman}, {Red, Green, Blue} …</p>
-<p>\5. 字符串型 String</p>
+<ol start="5">
+<li>字符串型 String</li>
+</ol>
 <p>Text: “Tsinghua University”, “No. 123, Pingan Avenue” …</p>
 <p>对于非数值型，我们需要进行类别转换，即将非数值型转换为数值型，以方便机器学习算法后续处理。</p>
 <p>对于定序型，我们可以使用序号编码，如成绩，分为Average, Good, Best三档，序号编码可以按照大小关系对定序型特征赋予一个数值ID，例如Average表示为1，Good表示为2，Best表示为3，转换后依旧保留了大小关系。</p>
