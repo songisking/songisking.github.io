@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		
+<title>Song&#39;s Castle-</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" type="image/x-icon" href="/image/favicon.ico">
+
+<meta name="keywords" content="Song,技术,机器学习,后端">
+<meta name="description" content="Song的技术总结和一些读书笔记等。">
+
+
+<script src="/js/jquery.min.js"></script>
+
+
+
+<!-- Baidu Analytics -->
+<script defer>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?4b5fe1472f22fa";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+	<meta name="generator" content="Hexo 5.4.0"></head>
+
+	<body>
+		
+<link rel="stylesheet" href="/css/page.css">
+
+
+<link rel="stylesheet" href="/css/page_cente.css">
+
+
+<link rel="stylesheet" href="/css/atom-one-dark.css">
+
+
+<link rel="stylesheet" href="/css/header.css">
+
+	<div class="header">
+		<div class="header-top">
+			<div class="h-left">
+				<a href="/">
+					<img src="/image/logo.png" alt="Quiet">
+				</a>
+			</div>
+			<div class="h-right">
+				<ul>
+					
+						
+								<li>
+									<a href="/">
+										HOME
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+						
+								<li>
+									<a href="/archives">
+										ARCHIVE
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+						
+								<li>
+									<a href="/categories">
+										CATEGORIES
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+						
+								<li>
+									<a href="/tags">
+										TAGS
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+						
+								<li>
+									<a href="/about">
+										ABOUT
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+				</ul>
+			</div>
+			<div class="h-right-close">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+					<path fill="none" d="M0 0h24v24H0z" />
+					<path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z" fill="rgba(68,68,68,1)" />
+				</svg>
+			</div>
+		</div>
+	</div>
+	<div class="sidebar">
+    <div class="topo">
+        <h2>Song</h2>
+    </div>
+    <ul>
+        
+        <li>
+            <a href="/">HOME</a>
+        </li>
+        
+        <li>
+            <a href="/archives">ARCHIVE</a>
+        </li>
+        
+        <li>
+            <a href="/categories">CATEGORIES</a>
+        </li>
+        
+        <li>
+            <a href="/tags">TAGS</a>
+        </li>
+        
+        <li>
+            <a href="/about">ABOUT</a>
+        </li>
+        
+    </ul>
+    <div class="my_foot">
+        
+        <a target="_blank" rel="noopener" href="https://github.com/songisking">
+            <img src="https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imggithub.png" alt="Quiet主题">
+        </a>
+        
+    </div>
+</div>
+<div class='shelter'
+    style='cursor: pointer;display: none; position: fixed;left: 0;top: 0; right: 0;bottom: 0;background-color: #333;opacity:0.5;z-index: 108;'>
+</div>
+<style>
+    .sidebar {
+        width: 0;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: #fff;
+        z-index: 999;
+        text-align: center;
+        box-shadow: -6px 0 20px rgba(98, 94, 94, .815)
+    }
+
+    .topo {
+        width: 100%;
+        height: 200px;
+        background: url(https://api.ixiaowai.cn/gqapi/gqapi.php) no-repeat;
+        background-size: 100% 100%;
+        position: relative;
+        display: flex;
+        align-items: flex-end
+    }
+
+    .topo h2 {
+        color: #fff;
+        z-index: 1;
+        position: relative;
+        margin: 0 0 10px 10px;
+        font-size: 1.2em;
+        box-sizing: border-box
+    }
+
+    .topo:before {
+        content: '';
+        background-image: url(/image/pattern.png);
+        background-repeat: repeat;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 1
+    }
+
+    .sidebar ul {
+        width: 100%;
+        margin-top: 50px
+    }
+
+    .sidebar ul li {
+        height: 50px;
+        list-style: none;
+        font-size: 1.2em;
+        text-align: right;
+        margin-right: 10px
+    }
+
+    .sidebar ul li a {
+        display: grid;
+        color: #5d606a;
+        text-overflow: ellipsis;
+        width: 100%;
+        text-decoration: none
+    }
+
+    .my_foot {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        position: absolute;
+        bottom: 0
+    }
+
+    .my_foot a {
+        text-decoration: none;
+        margin-right: 10px;
+        display: inline-block
+    }
+
+    .my_foot a img {
+        width: 30px;
+        height: 30px
+    }
+</style>
+
+<script>
+    $(function () { $('.h-right-close>svg').click(function () { $('.sidebar').animate({ width: "66%" }, 500); $('.shelter').fadeIn("slow") }); $('.shelter').click(function (e) { $('.sidebar').animate({ width: "0" }, 500); $('.shelter').fadeOut("slow") }) })
+</script>
+		<script>
+			$(function () { $(window).scroll(function () { if ($(document).scrollTop() > 100) { $(".header-top").removeClass("header-move2"); $('.header-top').addClass('header-move1') } else { $(".header-top").removeClass("header-move1"); $('.header-top').addClass('header-move2') } }) });
+		</script>
+<div class="header-bg ">
+    <div class="bg-content">
+        <ul class="tag">
+            
+        </ul>
+        <h1></h1>
+        <div class="article-info">
+            <div class="article-author">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                    <g>
+                        <path fill="#12183A"
+                            d="M6.187 15.265A6.47 6.47 0 0 0 10 16.5a6.47 6.47 0 0 0 3.813-1.235A4.99 4.99 0 0 0 10 13.5a4.99 4.99 0 0 0-3.813 1.765zM5.082 14.25A6.485 6.485 0 0 1 10 12c1.965 0 3.726.872 4.918 2.25a6.5 6.5 0 1 0-9.836 0zM10 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0-1.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z">
+                        </path>
+                    </g>
+                </svg>
+                
+                <span> <a href="">Song</a></span>
+                <p>2021-12-28 16:52:18</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="article-content">
+    <div id="article" class="content">
+        <p>这篇文章的结构是这样的：一、问题介绍和文章撰写缘由介绍。二、从暴力算法到kadane算法的思路过程，并着重介绍kadane算法。三、问题的实际应用场景。其中重点是第二部分。</p>
+<h1 id="一、问题介绍和文章撰写缘由介绍。"><a href="#一、问题介绍和文章撰写缘由介绍。" class="headerlink" title="一、问题介绍和文章撰写缘由介绍。"></a>一、问题介绍和文章撰写缘由介绍。</h1><p>前两周面试滴滴，一面面试官手撕了几道算法题，其中有一道题是这样的：求数组的最大连续子数组之和。例如，数组为[-2,1,-3,4,-1,2,1,-5,4]，最大连续子数组之和为6。（即最大连续子数组是[4,-1,2,1]，其和为6。）</p>
+<p>我当场给出的解法是kadane算法，不过面试官似乎不太了解，拿测试用例手动计算了一遍才判定了算法的正确性。所以想写一篇文章，不仅介绍这个简洁方便的算法，也对这个问题的其他解法进行对比分析。</p>
+<h1 id="二、从暴力算法到kadane算法的思路过程，并着重介绍kadane算法。"><a href="#二、从暴力算法到kadane算法的思路过程，并着重介绍kadane算法。" class="headerlink" title="二、从暴力算法到kadane算法的思路过程，并着重介绍kadane算法。"></a>二、从暴力算法到kadane算法的思路过程，并着重介绍kadane算法。</h1><p>这个问题最暴力的算法是比较数组所有子数组的大小，通过滑动窗口来实现，该算法的时间复杂度是<code>O(n^3)</code>（子数组数量为<code>n^2</code>，求和的算法复杂度为<code>O(n)</code>）,空间复杂度为<code>O(1)</code>。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">maxSubArrayBF</span>(<span class="hljs-params">nums</span>):</span><br>        length = <span class="hljs-built_in">len</span>(nums)<br>        MAX = nums[<span class="hljs-number">0</span>]<br>        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">0</span>,length):<br>            <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(i+<span class="hljs-number">1</span>,length+<span class="hljs-number">1</span>):<br>                sub = nums[i:j]<br>                sub_sum = <span class="hljs-built_in">sum</span>(sub)<br>                <span class="hljs-keyword">if</span> sub_sum&gt;MAX:<br>                    MAX = sub_sum<br>        <span class="hljs-keyword">return</span> MAX<br></code></pre></td></tr></table></figure>
+
+<p>将暴力算法的求和过程优化下可以达到<code>O（n^2）</code>。此时，用<code>sum_sub</code>变量保存<code>num[i]</code>开始至<code>nums[j]</code>的子数组之和。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">maxSubArrayBF2</span>(<span class="hljs-params">nums</span>):</span><br>        length = <span class="hljs-built_in">len</span>(nums)<br>        MAX = nums[<span class="hljs-number">0</span>]<br>        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">0</span>,length):<br>            sum_sub = <span class="hljs-number">0</span><br>            <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(i, length):<br>                sum_sub += nums[j]<br>                <span class="hljs-keyword">if</span> sum_sub&gt;MAX:<br>                    MAX = sum_sub<br>        <span class="hljs-keyword">return</span> MAX<br></code></pre></td></tr></table></figure>
+
+<p>平方阶复杂度在实际应用中还是过于复杂了。故需要思考效率更高的算法。</p>
+<p>要想得出效率更高的算法，首先得明白效率低的算法为何会效率低。</p>
+<p>在前两种暴力算法中，我们在遍历子数组获取当前最大子数组之和的时候，是以某个节点为开头的所有子序列: 如<code>[a]</code>，<code>[a, b]</code>，<code>[ a, b, c]</code>… 再从以<code>b</code>为开头的子序列开始遍历<code>[b] [b, c]</code>。</p>
+<p>这样导致每次获取当前最大子数组之和的时候需要对迄今为止所有子数组之和进行计算和比较。</p>
+<p>若更改对子数组的遍历方式，以子序列的结束节点为基准，先遍历出以某个节点为结束的所有子序列，因为每个节点都可能会是子序列的结束节点，因此要遍历下整个序列，如: 以 <code>b</code> 为结束点的所有子序列:<code> [a , b] [b]</code> 以<code> c</code> 为结束点的所有子序列:<code> [a, b, c] [b, c] [ c ]</code>。</p>
+<p>这样当我们想获取以<code>c</code>为结束点的子序列相关信息时，可以利用先前以<code>b</code>为结束点的子序列信息，比如若想知道子序列<code>[a,b,c]</code>之和，只要利用先前计算的<code>[a,b]</code>子序列之和再加上<code>c</code>即可，用递推式表示就是<code>sum[i]=sum[i-1]+array[i]</code>。</p>
+<p>总而言之，新的遍历方式可以产生递推关系，当前问题的解可以在先前问题的解的基础上获得，我们若保存先前问题的解，获得当前问题的解只需要常数时间。这样的算法效率自然得到了提高。采用这种遍历方式来解决问题，就是动态规划的思路。</p>
+<p>动态规划的关键有三点，一是定义子问题。二是递推基，即问题规模在最简单的情况下解是怎样的。三是递推关系，即如何通过先前保存的子问题的解获得当前解。</p>
+<p>在最大子数组之和问题中，首先定义子问题。我们定义子问题是为了能在最终保存的所有子问题解中获得目标问题解。常见的定义子问题的方式有两种，一是定义目标问题为子问题，二是定义非目标问题为子问题，目标问题的解可以通过所保存的所有子问题的解来获得。</p>
+<p>我们首先通过尝试使用第一种方式来定义子问题。我们将目标问题抽象为<code>array[0,n-1]</code>的最大子数组之和<code>maxSubSum(n-1)</code>，其中n表示数组长度。子问题即求<code>array[0,i]</code>的最大子数组之和<code>maxSubSum(i)</code>，我们用数组dp来记录子问题的解。递推基为<code>dp[0]=array[0]</code>。递推关系需要思考<code>maxSubSum(i-1)</code>和<code>maxSubSum(i)</code>的关系。而这样的递推关系很难获得。例如，数组<code>[-2,1,-3,4,-1,2,1,-5,4]</code>递推基为<code>dp[0]=-2</code>，而<code>dp[1]=1</code>, <code>dp[2]=1</code>, <code>dp[3]=4</code>, <code>dp[3]</code>和<code>dp[2]</code>之间的关系并不明确。</p>
+<p>故尝试使用第二种方式来定义子问题。我们将子问题定义为求以<code>i</code>为终止下标的子数组之和的最大值，这样最终可以通过比较以<code>0</code>为下标的子数组最大值、以<code>1</code>为下标的子数组最大值……以<code>n-1</code>为下标的子数组最大值获得最终解。我们用数组<code>dp</code>来记录子问题的解。递推基为<code>dp[0]=array[0]</code>。递推关系相比下来就清晰明了多了，当我们对<code>dp[i-1]</code>和<code>array[i]</code>分正负讨论。若<code>dp[i-1]&lt;0</code>, <code>array[i]&gt;0</code>，<code>dp[i]=array[i]</code>，若<code>dp[i-1]&lt;0</code>, <code>array[i]&lt;0</code>, <code>dp[i]=array[i]</code>，若<code>dp[i-1]&gt;0</code>, <code>array[i]&lt;0</code>, <code>dp[i]=dp[i-1]+array[i]</code>, 若<code>dp[i-1]&gt;0</code>, <code>array[i]&gt;0</code>, <code>dp[i]=dp[i-1]+array[i]</code>。最后, 原始问题的解即<code>max(dp)</code>。</p>
+<p>整个动态规划解法就浮现了。当然递推关系可以简化，<code>dp[i]=max(dp[i-1]+array[i], array[i])</code>。算法时间复杂度为<code>O(n)</code>，空间复杂度为<code>O(n)</code>。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">maxSubArrayDP</span>(<span class="hljs-params">nums</span>):</span><br>    length = <span class="hljs-built_in">len</span>(nums)<br>    dp = [<span class="hljs-number">0</span> <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(length)]<br>    dp[<span class="hljs-number">0</span>] = nums[<span class="hljs-number">0</span>]<br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>, length):<br>        dp[i] = <span class="hljs-built_in">max</span>(dp[i-<span class="hljs-number">1</span>]+nums[i], nums[i])<br>    <span class="hljs-keyword">return</span> <span class="hljs-built_in">max</span>(dp)<br></code></pre></td></tr></table></figure>
+
+<p>kadane算法是在动态规划解的基础上进一步优化。它使用一根指针保存以i为结尾的子数组最大值之和，使用另一根指针保存迄今为止的子数组最大值之和。算法时间复杂度为<code>O（n）</code>,空间复杂度为<code>O(1)</code>。代码非常漂亮优雅。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">maxSubArrayKadane</span>(<span class="hljs-params">nums</span>):</span><br>    length = <span class="hljs-built_in">len</span>(nums)<br>    max_ending_here = max_sub_sum = nums[<span class="hljs-number">0</span>]<br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>,length):<br>        max_ending_here = <span class="hljs-built_in">max</span>(max_ending_here+nums[i],nums[i])<br>        max_sub_sum = <span class="hljs-built_in">max</span>(max_ending_here, max_sub_sum)<br>    <span class="hljs-keyword">return</span> max_sub_sum<br></code></pre></td></tr></table></figure>
+
+<h1 id="三、问题的实际应用场景。"><a href="#三、问题的实际应用场景。" class="headerlink" title="三、问题的实际应用场景。"></a>三、问题的实际应用场景。</h1><p>在计算机视觉中，通过kadane算法来检测代表图像中最亮区域的最高分数子序列。</p>
+<p>有些其他算法题可以通过转化为最大子数组之和问题，用kadane算法求解。如leetcode的第121题：</p>
+<blockquote>
+<p>给定一个数组，它的第 i 个元素是一支给定股票第 i 天的价格。<br>如果你最多只允许完成一笔交易（即买入和卖出一支股票），设计一个算法来计算你所能获取的最大利润。<br>注意你不能在买入股票前卖出股票。<br>示例：<br>输入: [7,1,5,3,6,4]<br>输出: 5<br>解释: 在第 2 天（股票价格 = 1）的时候买入，在第 5 天（股票价格 = 6）的时候卖出，最大利润 = 6-1 = 5 。<br>注意利润不能是 7-1 = 6, 因为卖出价格需要大于买入价格。</p>
+</blockquote>
+<p>求两点差的问题可以看作求区间和的问题。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span>(<span class="hljs-params"><span class="hljs-built_in">object</span></span>):</span><br>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">maxSubArrayKadane</span>(<span class="hljs-params">self, nums</span>):</span><br>        length = <span class="hljs-built_in">len</span>(nums)<br>        max_ending_here = max_sub_sum = nums[<span class="hljs-number">0</span>]<br>        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>,length):<br>            max_ending_here = <span class="hljs-built_in">max</span>(max_ending_here+nums[i],nums[i])<br>            max_sub_sum = <span class="hljs-built_in">max</span>(max_ending_here, max_sub_sum)<br>        <span class="hljs-keyword">return</span> max_sub_sum<br><br>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">maxProfit</span>(<span class="hljs-params">self, prices</span>):</span><br>        <span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string">        :type prices: List[int]</span><br><span class="hljs-string">        :rtype: int</span><br><span class="hljs-string">        &quot;&quot;&quot;</span><br>        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> prices:<br>            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span><br>        <span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(prices)&lt;=<span class="hljs-number">1</span>:<br>            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span><br>        gap = [<span class="hljs-number">0</span> <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(prices)-<span class="hljs-number">1</span>)]<br>        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">0</span>,<span class="hljs-built_in">len</span>(prices)-<span class="hljs-number">1</span>):<br>            gap[i] = prices[i+<span class="hljs-number">1</span>]-prices[i]<br>        <span class="hljs-comment"># print(gap)</span><br>        max_subarrary = self.maxSubarray(gap)<br>        <span class="hljs-keyword">if</span> max_subarrary&lt;<span class="hljs-number">0</span>:<br>            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span><br>        <span class="hljs-keyword">else</span>:<br>            <span class="hljs-keyword">return</span> max_subarrary<br></code></pre></td></tr></table></figure>
+    </div>
+</div>
+<style>
+    #noneimg img {
+        display: none;
+        z-index: 109;
+        width: 600px !important;
+        border-radius: 0px;
+        position: fixed;
+        box-shadow: 0 0 0px #c3c3c300 !important;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto !important;
+    }
+
+    @media screen and (max-width:600px) {
+        #noneimg img {
+            width: 88%
+        }
+    }
+</style>
+<script>
+    $(function () { $('#article').click(function (e) { if (e.target.tagName == "IMG") { if ($('#nonediv').length == 0) { let MImg = `<div id='noneimg'><img src='${e.target.currentSrc}'></div>`; let MDiv = "<div id='nonediv' style='cursor: pointer;display: none; position: fixed;left: 0;top: 0; right: 0;bottom: 0;background-color: #333;opacity:0.5;z-index: 108;'></div>"; $('#article').append(MDiv); $('#article').append(MImg); $("#nonediv").fadeIn("slow"); $("#noneimg img").fadeIn("slow") } } else { if ($('#nonediv').length !== 0) { $("#noneimg ").fadeOut("slow"); $("#nonediv").fadeOut("slow"); setTimeout(function () { $('#nonediv').remove(); $('#noneimg').remove() }, 500) } } }); $('.article-content').addClass('content-move') });
+</script>
+<div class="Last-Next">
+    
+
+    
+    <a href="/2021/12/22/%E6%9C%80%E5%85%A8%E9%9D%A2%E7%9A%84%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86%E4%BB%8B%E7%BB%8D/">
+        <div class="next">
+            <span>下一篇</span>
+            <p>最全面的数据预处理介绍</p>
+        </div>
+    </a>
+    
+</div>
+		
+<link rel="stylesheet" href="/css/food.css">
+
+<div class="footer">
+	<div class="Copyright">
+		©2021 By Song. 主题：<a
+			style="text-decoration: none;display: contents; color: #898F9F;"
+			target="_blank" rel="noopener" href="https://github.com/qiaobug/hexo-theme-quiet">Quiet</a>
+	</div>
+	<div class="contact">
+		
+		<a target="_blank" rel="noopener" href="https://github.com/songisking">
+			<img src="https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imggithub.png" alt="Quiet主题">
+		</a>
+		
+	</div>
+</div>
+
+<script src="/js/jquery.min.js"></script>
+
+
+<script src="/js/gotop.js"></script>
+
+
+<style type="text/css">
+    @media screen and (min-width: 600px) {
+        .goTop>span {
+            display: block;
+            border-radius: 50%;
+            width: 66px;
+            height: 66px;
+            cursor: pointer;
+            opacity: 0.8;
+            background: rgba(18, 24, 58, 0.06);
+            text-align: center;
+            border: 1px solid rgba(18, 24, 58, 0.06);
+
+            transition: border .5s;
+            -moz-transition: border .5s;
+            /* Firefox 4 */
+            -webkit-transition: border .5s;
+            /* Safari 和 Chrome */
+            -o-transition: border .5s;
+            /* Opera */
+        }
+
+        .goTop>span:hover {
+            border: 1px solid #6680B3;
+        }
+
+
+        .goTop {
+            position: fixed;
+            right: 30px;
+            bottom: 80px;
+        }
+
+        .goTop>span>svg {
+            width: 30px;
+            height: 30px;
+            margin-top: 17.5px;
+            opacity: 0.7;
+        }
+
+    }
+
+    @media screen and (max-width: 600px) {
+        .goTop {
+            display: none;
+        }
+    }
+</style>
+<div class="goTop" id="js-go_top">
+    <span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <g>
+                <path d="M13 12v8h-2v-8H4l8-8 8 8z"></path>
+            </g>
+        </svg>
+    </span>
+</div>
+<script>
+    $('#js-go_top').gotoTop({ offset: 500, speed: 300, animationShow: { 'transform': 'translate(0,0)', 'transition': 'transform .5s ease-in-out' }, animationHide: { 'transform': 'translate(100px,0)', 'transition': 'transform .5s ease-in-out' } });
+</script>
+<script>
+	console.log('\n %c Hexo-Quiet 主题 %c https://github.com/QiaoBug/hexo-theme-quiet \n', 'color: #fadfa3; background: #030307; padding:5px 0;', 'background: #fadfa3; padding:5px 0;')
+</script>
+	</body>
+
+</html>
